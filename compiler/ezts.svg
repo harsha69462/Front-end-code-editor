@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.815" y1="1.061" x2="-0.076" y2="0.751" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5e17eb"/>
+      <stop offset="0.5" stop-color="#7822d2"/>
+      <stop offset="0.512" stop-color="#d2467b"/>
+      <stop offset="1" stop-color="#ff5850"/>
+    </linearGradient>
+    <filter id="Ellipse_1" x="140" y="140" width="819" height="819" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_" x="204" y="339" width="701" height="498" filterUnits="userSpaceOnUse">
+      <feOffset dx="20" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-ezts">
+      <rect width="1080" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="ezts" clip-path="url(#clip-ezts)">
+    <rect width="1080" height="1080" fill="rgba(255,255,255,0)"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_1)">
+      <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="400" cy="400" r="400" transform="translate(140 140)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_)">
+      <text id="_2" data-name="&lt;/&gt;" transform="translate(204 339)" fill="#fff" font-size="360" font-family="MaturaMTScriptCapitals, Matura MT Script Capitals"><tspan x="51.059" y="308">&lt;/&gt;</tspan></text>
+    </g>
+  </g>
+</svg>

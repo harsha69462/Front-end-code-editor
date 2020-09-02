@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DebugStory</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="assets/css/darkmode.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body oncontextmenu="return false" class="dark">
+    <!-- modal starts -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content container-fluid">
+          <div class="modal-header">
+            <img
+              src="ezts.svg"
+              alt=""
+              class="img-fluid"
+              style="height: 50px;"
+            />
+            <p
+              style="
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                  'Helvetica Neue', sans-serif;
+                font-weight: 600;
+                border-left: 2px solid rgb(146, 143, 143);
+              "
+              class="light-text my-auto pl-2 text-dark"
+            >
+              DEBUG STORY
+            </p>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              onclick="changeBtn()"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="modal-body container-fluid">
+            <input type="text" id="myInput" class="form-control" value="" />
+          </div>
+          <div class="modal-footer">
+            <input
+              id="copybtn"
+              type="button"
+              class="btn btn-default"
+              value="copy"
+              onclick="copyToClipboard()"
+              onmouseout="outFunc()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal ends -->
+    <div class="p-2 d-flex" style="place-content: space-between;">
+      <div class="d-flex">
+        <img src="ezts.svg" alt="" class="img-fluid" style="height: 80px;" />
+        <p
+          style="
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+              Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+              sans-serif;
+            font-weight: 600;
+            border-left: 2px solid rgb(146, 143, 143);
+          "
+          class="light-text my-auto pl-2 toggleText"
+        >
+          DEBUG STORY
+        </p>
+      </div>
+      <div class="my-auto mr-1">
+        <a href="https://ezts.in/my/"
+          ><i
+            class="fa fa-angle-double-left light-text toggleText fa-1x"
+            aria-hidden="true"
+          >
+            <span
+              style="
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                  'Helvetica Neue', sans-serif;
+              "
+              >EZTS</span
+            >
+          </i></a
+        >
+      </div>
+    </div>
+    <div class="row container-fluid">
+      <div class="col-md-6 mt-1">
+        <div class="container-fluid">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a
+                class="nav-link active font-weight-bold light-text toggleText"
+                data-toggle="tab"
+                href="#home"
+                >HTML5</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link font-weight-bold light-text toggleText"
+                data-toggle="tab"
+                href="#menu1"
+                >CSS3</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link font-weight-bold light-text toggleText"
+                data-toggle="tab"
+                href="#menu2"
+                >JavaScript-JQuery</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane container active" id="home">
+            <textarea id="htmlBox" placeholder="HTML"></textarea>
+          </div>
+          <div class="tab-pane container fade" id="menu1">
+            <textarea id="cssBox" placeholder="CSS"></textarea>
+          </div>
+          <div class="tab-pane container fade" id="menu2">
+            <textarea id="jsBox" placeholder="JS"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div
+          class="container-fluid d-flex"
+          style="place-content: space-between; padding-left: 0px;"
+        >
+          <div class="d-flex">
+            <button
+              id="shareBtn"
+              type="button"
+              class="btn text-white font-weight-bold mr-1"
+              style="background-color: #ff5850;"
+              data-toggle="modal"
+              data-target="#myModal"
+            >
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+              share code
+            </button>
+            <button
+              id="runBtn"
+              type="button"
+              class="btn text-white font-weight-bold"
+              style="background-color: #5222d0;"
+            >
+              <i class="fa fa-play" aria-hidden="true"></i>
+              Run code
+            </button>
+          </div>
+          <div id="toggleSwitch">
+            <label class="switch" id="toggle" value="dark">
+              <input type="checkbox" id="myCheck" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+        <iframe id="previewBox"></iframe>
+      </div>
+    </div>
+
+    <footer class="container text-white">
+      copyrghts &copy; Ez Trainings & technologies Pvt Ltd
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/toggle.js"></script>
+    <script src="assets/js/alpha.js"></script>
+  </body>
+</html>
